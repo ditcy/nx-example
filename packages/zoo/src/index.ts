@@ -1,5 +1,5 @@
-import { zoo } from './lib/zoo.js';
+import { getZoo } from './lib/zoo.js';
 
 export * from './lib/zoo.js';
 
-console.log('My zoo: ',  zoo());
+console.log('My zoo: ', getZoo());
