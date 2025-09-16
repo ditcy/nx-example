@@ -21,3 +21,24 @@ npx nx build animal
 
 node ./packages/animal/dist/index.js
 ```
+
+## Generate app
+
+```sh
+npx nx g @nx/node:app city
+```
+
+Change tsconfig.app.json
+
+```json
+{
+    ...
+    "compilerOptions": {
+        ...
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        ...
+    }
+    ...
+}
+```
