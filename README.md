@@ -28,6 +28,7 @@ node ./packages/animal/dist/index.js
 npx nx g @nx/node:app city
 ```
 
+If build fails
 Change tsconfig.app.json
 
 ```json
@@ -40,5 +41,22 @@ Change tsconfig.app.json
         ...
     }
     ...
+}
+```
+
+Change package.json
+
+```json
+{
+  "type": "module", // !
+  "nx": {
+    "targets": {
+      "build": {
+        "options": {
+          "format": ["esm"] // !
+        }
+      }
+    }
+  }
 }
 ```
